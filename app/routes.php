@@ -15,3 +15,11 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('about', function(){
+   return 'this is about';
+});
+
+Route::get('about/classes/test/{theSubject}', function($theSubject){
+    return "Content about {$theSubject} classes goes here.";
+});
