@@ -15,4 +15,17 @@ class BaseController extends Controller {
 		}
 	}
 
+
+
+    public function showLogin()
+    {
+        // show the form
+        return View::make('login');
+    }
+
+    public function doLogin()
+    {
+// process the form
+    }
+
 }

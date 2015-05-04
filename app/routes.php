@@ -14,23 +14,11 @@
 Route::get('/', function()
 {
 
-    Schema::create('users', function($newTable)
-    {
-        $newTable->increments('id');
-        $newTable->string('name');
-        $newTable->string('email');
-        $newTable->string('stream');
-        $newTable->date('usersince');
-        $newTable->timestamps();
-    });
-
     return View::make('hello');
 });
 
-Route::get('about', function(){
-   return 'this is about';
-});
 
-Route::get('about/classes/{theSubject}', function($theSubject){
-    return "Content about {$theSubject} classes goes here.";
-});
+Route::controller('users', 'UsersController');
+
+
+
