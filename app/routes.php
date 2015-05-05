@@ -13,12 +13,37 @@
 
 Route::get('/', function()
 {
-
     return View::make('hello');
 });
 
+Route::get('/register', function()
+{
+    return View::make('register');
+});
 
-Route::controller('users', 'UsersController');
 
+Route::post('/register', function()
+{
+    $user = new User;
+    $user->email = Input::get('email');
+    $user->username = Input::get('username');
+    $user->password = Hash::make(Input::get('password'));
+    $user->save();
+    $theEmail = Input::get('email');
+    return View::make('thanks')->with('theEmail', $theEmail);
+});
 
+Route::get('/login', function()
+{
+    return View::make('login');
+});
 
+Route::get('/logout', function()
+{
+    return View::make('logout');
+});
+
+Route::get('/thanks', function()
+{
+    return View::make('thanks');
+});
