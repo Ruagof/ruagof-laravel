@@ -6,7 +6,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Laravel PHP Framework</title>
+    <title>Ruagof | Thanks</title>
     <link rel="stylesheet" href="<?php echo asset('css/bootstrap.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo asset('css/bootstrap.min.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo asset('css/bootstrap.css'); ?>" type="text/css">

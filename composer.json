@@ -13,6 +13,7 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
+          "app/viewComposers",
 			"app/tests/TestCase.php"
 		]
 	},

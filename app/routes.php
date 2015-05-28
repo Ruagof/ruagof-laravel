@@ -13,12 +13,22 @@
 
 Route::get('/', function()
 {
-    return View::make('hello');
+    return View::make('home');
 });
 
 Route::get('/register', function()
 {
     return View::make('register');
+});
+
+Route::get('/help', function()
+{
+    return View::make('help');
+});
+
+Route::get('/about', function()
+{
+    return View::make('about');
 });
 
 
@@ -66,3 +76,15 @@ function()
 {
     return View::make('sample');
 }));
+
+Route::get('/stream', array(
+    'before' =>   'auth',
+    function()
+    {
+        return View::make('stream');
+    }));
+
+Route::get('/navigation', function()
+{
+    return View::make('navigation');
+});
